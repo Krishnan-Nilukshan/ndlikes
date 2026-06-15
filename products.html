@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Core Catalog | ND Likes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="loader" id="loader"><div class="spinner"></div></div>
+
+    <header class="main-header">
+        <nav class="navbar wrapper">
+            <a href="index.html" class="logo">ND LIKES</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Categories</a></li>
+                <li><a href="products.html?filter=all">All Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="header-actions">
+                <div class="cart-icon-container" id="cartToggle">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+                <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Side Cart Drawer -->
+    <div class="cart-drawer-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <h3>Shopping Bag</h3>
+            <button class="close-drawer" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items-container" id="cartItems"></div>
+        <div class="cart-drawer-footer">
+            <div class="cart-total-row"><span>Subtotal:</span><span id="cartTotal">$0.00</span></div>
+            <button class="btn btn-gold btn-block" id="checkoutCartBtn">Proceed to Checkout</button>
+            <p class="cart-empty-msg" id="cartEmptyMsg">Your marketplace selection is empty.</p>
+        </div>
+    </div>
+
+    <!-- Live Universal Filtration Search Core -->
+    <section class="search-hero wrapper">
+        <div class="search-filter-layout-panel">
+            <div class="search-box-container">
+                <i class="fas fa-search search-box-icon"></i>
+                <input type="text" id="productSearch" placeholder="Search across all dynamic categories instantly...">
+            </div>
+            <div class="category-pill-row" id="categoryPillRow">
+                <button class="pill active" data-target="all">All Items</button>
+                <button class="pill" data-target="Electronics">Electronics</button>
+                <button class="pill" data-target="Fashion">Fashion</button>
+                <button class="pill" data-target="Shoes">Shoes</button>
+                <button class="pill" data-target="Watches">Watches</button>
+                <button class="pill" data-target="Beauty">Beauty</button>
+                <button class="pill" data-target="Home & Living">Home & Living</button>
+                <button class="pill" data-target="Accessories">Accessories</button>
+                <button class="pill" data-target="Gaming">Gaming</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Live Dynamic Product Matrix Display -->
+    <main class="products-page-container wrapper">
+        <div class="products-grid" id="productsGrid"></div>
+    </main>
+
+    <!-- Universal Checkout Processing Overlay Modal -->
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="modal-content glassmorphism">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <h2>Secure Form Verification</h2>
+            <p class="modal-sub">Submit routing information below to finalize secure text transmission pipelines.</p>
+            <form id="checkoutForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" required placeholder="Jane Doe">
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number *</label>
+                    <input type="tel" id="phoneNumber" required placeholder="+1 (555) 000-0000">
+                </div>
+                <div class="form-group">
+                    <label for="address">Delivery Address *</label>
+                    <input type="text" id="address" required placeholder="742 Evergreen Terrace">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City *</label>
+                        <input type="text" id="city" required placeholder="Springfield">
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country *</label>
+                        <input type="text" id="country" required placeholder="United States">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-gold btn-block">Place Order via WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-grid wrapper">
+            <div class="footer-about">
+                <h2>ND LIKES</h2>
+                <p>An international multi-category retail ecosystem delivering tier-one electronics, elite fashion apparel, luxury timepieces, and accessories instantly verified via targeted direct infrastructure routing.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Categories</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-socials">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook Link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram Link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp Link"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ND LIKES. Structural Matrix Execution. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
+</body>
+</html>

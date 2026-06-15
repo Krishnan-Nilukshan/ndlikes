@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ND Likes - Premier International Multi-Category E-Commerce Marketplace. Shop Fashion, Electronics, Watches, Accessories, and Beauty.">
+    <title>ND Likes | Universal Premium Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Global Loading Screen Anim -->
+    <div class="loader" id="loader"><div class="spinner"></div></div>
+
+    <!-- Sticky Navigation Architecture -->
+    <header class="main-header">
+        <nav class="navbar wrapper">
+            <a href="index.html" class="logo">ND LIKES</a>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="products.html">Categories</a></li>
+                <li><a href="products.html?filter=all">All Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <div class="search-trigger-container mobile-hide">
+                    <input type="text" id="navSearchInput" placeholder="Search elite items...">
+                    <i class="fas fa-search" id="navSearchBtn"></i>
+                </div>
+                <div class="cart-icon-container" id="cartToggle">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+                <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Slide-Out Shopping Bag Drawer -->
+    <div class="cart-drawer-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <h3>Shopping Bag</h3>
+            <button class="close-drawer" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items-container" id="cartItems"></div>
+        <div class="cart-drawer-footer">
+            <div class="cart-total-row"><span>Subtotal:</span><span id="cartTotal">$0.00</span></div>
+            <button class="btn btn-gold btn-block" id="checkoutCartBtn">Proceed to Checkout</button>
+            <p class="cart-empty-msg" id="cartEmptyMsg">Your marketplace selection is empty.</p>
+        </div>
+    </div>
+
+    <!-- Multi-Banner Hero Slider -->
+    <section class="hero-section">
+        <div class="slider" id="heroSlider">
+            <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1920&q=80');">
+                <div class="hero-content">
+                    <span class="gold-tag">Limited Premium Allocations</span>
+                    <h1>Fashion Deals</h1>
+                    <p>Everything You Need. One Place.</p>
+                    <a href="products.html?cat=Fashion" class="btn btn-gold">Shop Now</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1468495244123-6c6c332eeece?auto=format&fit=crop&w=1920&q=80');">
+                <div class="hero-content">
+                    <span class="gold-tag">Next-Gen Technological Tiers</span>
+                    <h1>Electronics Sale</h1>
+                    <p>Everything You Need. One Place.</p>
+                    <a href="products.html?cat=Electronics" class="btn btn-gold">Shop Now</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1509319117193-57bab727e09d?auto=format&fit=crop&w=1920&q=80');">
+                <div class="hero-content">
+                    <span class="gold-tag">Curated Global Selections</span>
+                    <h1>Trending Products</h1>
+                    <p>Everything You Need. One Place.</p>
+                    <a href="products.html?filter=all" class="btn btn-gold">Shop Now</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=1920&q=80');">
+                <div class="hero-content">
+                    <span class="gold-tag">Fresh Production Arrivals</span>
+                    <h1>New Arrivals</h1>
+                    <p>Everything You Need. One Place.</p>
+                    <a href="products.html?filter=all" class="btn btn-gold">Shop Now</a>
+                </div>
+            </div>
+        </div>
+        <button class="slider-arrow prev" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-arrow next" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+    </section>
+
+    <!-- Global Dynamic Distribution Categories Grid -->
+    <section class="categories-section wrapper section-padding">
+        <div class="section-title">
+            <h2>Marketplace Segments</h2>
+            <div class="gold-line"></div>
+        </div>
+        <div class="category-grid">
+            <div class="category-card" onclick="window.location.href='products.html?cat=Electronics'">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80" alt="Electronics" loading="lazy">
+                <div class="category-overlay"><h3>Electronics</h3></div>
+            </div>
+            <div class="category-card" onclick="window.location.href='products.html?cat=Fashion'">
+                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=500&q=80" alt="Fashion" loading="lazy">
+                <div class="category-overlay"><h3>Fashion</h3></div>
+            </div>
+            <div class="category-card" onclick="window.location.href='products.html?cat=Shoes'">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80" alt="Shoes" loading="lazy">
+                <div class="category-overlay"><h3>Shoes</h3></div>
+            </div>
+            <div class="category-card" onclick="window.location.href='products.html?cat=Beauty'">
+                <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=500&q=80" alt="Beauty" loading="lazy">
+                <div class="category-overlay"><h3>Beauty</h3></div>
+            </div>
+            <div class="category-card" onclick="window.location.href='products.html?cat=Home%20%26%20Living'">
+                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=500&q=80" alt="Home & Living" loading="lazy">
+                <div class="category-overlay"><h3>Home & Living</h3></div>
+            </div>
+            <div class="category-card" onclick="window.location.href='products.html?cat=Accessories'">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500&q=80" alt="Accessories" loading="lazy">
+                <div class="category-overlay"><h3>Accessories</h3></div>
+            </div>
+            <div class="category-card" onclick="window.location.href='products.html?cat=Gaming'">
+                <img src="https://images.unsplash.com/photo-1605899435973-ca2d1a8861cf?auto=format&fit=crop&w=500&q=80" alt="Gaming" loading="lazy">
+                <div class="category-overlay"><h3>Gaming</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Platform Footer -->
+    <footer class="main-footer">
+        <div class="footer-grid wrapper">
+            <div class="footer-about">
+                <h2>ND LIKES</h2>
+                <p>An international multi-category retail ecosystem delivering tier-one electronics, elite fashion apparel, luxury timepieces, and accessories instantly verified via targeted direct infrastructure routing.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Categories</a></li>
+                    <li><a href="products.html?filter=all">All Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-socials">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook Link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram Link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp Link"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ND LIKES. Structural Matrix Execution. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
+</body>
+</html>
